@@ -30,3 +30,9 @@
 1. **The Friday Audit:** Weekly summary of mental models.
 2. **Atomic Commits:** No "fixed stuff" commits.
 3. **The Ledger:** Personal documentation of every bug encountered.
+
+## Current Status
+
+[x] Session 01: Environment Setup and Shell Fundamentals
+[x] Project 0.1: ICE-BREAKER (System Uptime Tracker in Bash)
+[ ] Session 02: The Protocol Layer (Understanding the Request-Response Lifecycle)
