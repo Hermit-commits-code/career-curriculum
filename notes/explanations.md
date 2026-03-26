@@ -150,3 +150,19 @@ By combining `-v` (Verbose) and `-L` (Location), you will see two handshakes in 
 ### **The Explanation:**
 
 The `-m` (or `--max-time`) flag sets a hard limit in seconds. If the request takes longer than 5 seconds, `curl` kills the process and exits with an error. In a production environment, you always set a timeout. If you don't, one slow server can "clog the pipes" of your entire application, causing a massive system-wide slowdown.
+
+# Core Auditor
+
+## Initializing the Auditor Dependencies
+
+### The Command:
+
+`uv add fastapi "uvicorn[standard]"`
+
+### **The Explanation:**
+
+- `fastapi`: The high-performance framework that handles our "Endpoints" (the doors our UI will knock on).
+
+- `uvicorn`: The ASGI Server. FastAPI is just the "Code"; Uvicorn is the "Engine" that actually listens to the internet and hands the requests to our code.
+
+- The `[standard]`: This tells `uv` to install the high-speed C-based libraries that make Uvicorn run faster.

@@ -36,3 +36,10 @@
 [x] Session 01: Environment Setup and Shell Fundamentals
 [x] Project 0.1: ICE-BREAKER (System Uptime Tracker in Bash)
 [ ] Session 02: The Protocol Layer (Understanding the Request-Response Lifecycle)
+
+## System Architecture
+
+| Service      | Technology           | Responsibility                                                    |
+| ------------ | -------------------- | ----------------------------------------------------------------- |
+| Core Auditor | Python + FastAPI     | Handles API requests, processes data, and manages business logic. |
+| Netrunner UI | TypeScript + Next.js | Provides a user interface for monitoring and managing the system. |
