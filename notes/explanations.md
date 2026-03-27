@@ -166,3 +166,35 @@ The `-m` (or `--max-time`) flag sets a hard limit in seconds. If the request tak
 - `uvicorn`: The ASGI Server. FastAPI is just the "Code"; Uvicorn is the "Engine" that actually listens to the internet and hands the requests to our code.
 
 - The `[standard]`: This tells `uv` to install the high-speed C-based libraries that make Uvicorn run faster.
+
+### The Command:
+
+`uv add httpx`
+
+### **The Explanation:**
+
+- `httpx`: A next-generation HTTP client for Python. Unlike the older requests library, httpx is built from the ground up to support AsyncIO. This allows our FastAPI server to send a request to the NPM Registry and then "yield" control back to the CPU to handle other tasks while waiting for the network response. It’s the difference between a worker standing still waiting for a package and a worker who starts a second task while the delivery truck is en route.
+
+### The Command:
+
+`uv run uvicorn main:app --reload`
+
+### **The Explanation:**
+
+- `uv run`: Ensures the command uses the exact Python interpreter and libraries locked in our .venv.
+
+- `uvicorn`: The Lightning-fast ASGI server implementation.
+
+- `main:app`: Tells Uvicorn to look in the main.py file for the object named app (our FastAPI instance).
+
+- `--reload`: This is the "Hot Reload" feature. It watches your source code for changes and automatically restarts the server when you save. This is a must-have for development, as it allows you to see your changes in real-time without manually stopping and starting the server.
+
+## The Async Bridge
+
+### The Command:
+
+`vulnerabilities = await check_vulnerabilities(name, version)`
+
+### **The Explanation:**
+
+This line is a Function Call. Because `check_vulnerabilities` is an async function (a "Coroutine"), we cannot just call it normally. We must use the `await` keyword. This tells Python: "Go start the security scan, and don't come back to finish this response until you have the results from the OSV API." This is how we chain multiple network requests together into a single, unified intelligence report.
